@@ -21,7 +21,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
         [SerializeField] private float _spacing = 15;
         [SerializeField] private bool _flipY = true;
 
-        [SerializeField] private Vector3 _leftHandRefPos, _rightHandRefPos;
+        [Tooltip("Factor to multiply the 2D image offset into 3d movement. Effectively the play area.")]
+        [SerializeField] private float _handOffsetMagnitude;
 
         private Experimental.TextureFramePool _textureFramePool;
         private GameObject[] _landmarkObjects;
@@ -32,6 +33,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         private List<List<Vector3>> _handLandmarks;
         private List<bool> _handIsRight;
+        private List<Vector2> _handOffsets;
         private object _landmarkLock = new object();
 
         public readonly HandLandmarkDetectionConfig config = new HandLandmarkDetectionConfig();
@@ -196,17 +198,21 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             if (result.handLandmarks == null) return;
 
             int handCount = result.handWorldLandmarks.Count;
+            float ar = (float)image.Width() / image.Height();
 
             lock (_landmarkLock)
             {
                 _handLandmarks = new List<List<Vector3>>();
                 _handIsRight = new List<bool>();
+                _handOffsets = new List<Vector2>();
                 for (int i = 0; i < handCount; ++i)
                 {
                     _handLandmarks.Add(new List<Vector3>());
 
                     string categoryName = result.handedness[i].categories[0].categoryName;
                     _handIsRight.Add(categoryName == "Right");
+                    var rootLandmark2D = result.handLandmarks[i].landmarks[0];
+                    _handOffsets.Add(new Vector2((rootLandmark2D.x - 0.5f) * ar, 1f - rootLandmark2D.y));
 
                     for (int j = 0; j < result.handWorldLandmarks[i].landmarks.Count; ++j)
                     {
@@ -257,14 +263,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
                             obj.transform.position = new Vector3(obj.transform.position.x, -obj.transform.position.y, obj.transform.position.z);
                         }
 
-                        if (_handIsRight[i])
-                        {
-                            obj.transform.position += _rightHandRefPos;
-                        }
-                        else
-                        {
-                            obj.transform.position += _leftHandRefPos;
-                        }
+                        obj.transform.position += (Vector3)_handOffsets[i] * _handOffsetMagnitude;
                         ++objCount;
                     }
                 }

@@ -1,19 +1,19 @@
 {
   "context": {
-    "projectPath": "D:/Projects/MediaPipeUnityPlugin-all/Packages",
+    "projectPath": "D:/Projects/ReHabGame_Hand_Dexterity/Packages",
     "unityVersion": "6000.1.12f1"
   },
   "inputs": [
-    "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\manifest.json",
-    "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\packages-lock.json",
+    "D:\\Projects\\ReHabGame_Hand_Dexterity\\Packages\\manifest.json",
+    "D:\\Projects\\ReHabGame_Hand_Dexterity\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.1.12f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1",
-    "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\com.github.homuler.mediapipe\\package.json"
+    "D:\\Projects\\ReHabGame_Hand_Dexterity\\Packages\\com.github.homuler.mediapipe\\package.json"
   ],
   "outputs": {
     "com.unity.ai.navigation@2.0.9": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.ai.navigation@5218e4bf7edc",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.ai.navigation@5218e4bf7edc",
       "fingerprint": "5218e4bf7edc04fcad4ed3836c1c41aef334b996",
       "editorCompatibility": "6000.0.0a1",
       "version": "2.0.9",
@@ -23,7 +23,7 @@
     "com.unity.collab-proxy@2.9.3": {
       "name": "com.unity.collab-proxy",
       "displayName": "Unity Version Control",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.collab-proxy@ab839cc7d2ad",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.collab-proxy@ab839cc7d2ad",
       "fingerprint": "ab839cc7d2adf143e5378baf46edc31cbc5d84f7",
       "editorCompatibility": "2021.3.0f1",
       "version": "2.9.3",
@@ -33,7 +33,7 @@
     "com.unity.ide.rider@3.0.38": {
       "name": "com.unity.ide.rider",
       "displayName": "JetBrains Rider Editor",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.ide.rider@1f60b3138684",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.ide.rider@1f60b3138684",
       "fingerprint": "1f60b3138684c97af67aa8d911b1632ba916d29d",
       "editorCompatibility": "2021.3.0a1",
       "version": "3.0.38",
@@ -43,7 +43,7 @@
     "com.unity.ide.visualstudio@2.0.23": {
       "name": "com.unity.ide.visualstudio",
       "displayName": "Visual Studio Editor",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.ide.visualstudio@198cdf337d13",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.ide.visualstudio@198cdf337d13",
       "fingerprint": "198cdf337d13c83ca953581515630d66b779e92b",
       "editorCompatibility": "2019.4.25f1",
       "version": "2.0.23",
@@ -53,7 +53,7 @@
     "com.unity.mathematics@1.3.2": {
       "name": "com.unity.mathematics",
       "displayName": "Mathematics",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
       "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.3.2",
@@ -63,7 +63,7 @@
     "com.unity.memoryprofiler@1.1.8": {
       "name": "com.unity.memoryprofiler",
       "displayName": "Memory Profiler",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.memoryprofiler@8c7176da5e5a",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.memoryprofiler@8c7176da5e5a",
       "fingerprint": "8c7176da5e5a84d90a7595fc90e45938a7166301",
       "editorCompatibility": "2022.3.0a1",
       "version": "1.1.8",
@@ -73,7 +73,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
@@ -83,7 +83,7 @@
     "com.unity.settings-manager@2.1.0": {
       "name": "com.unity.settings-manager",
       "displayName": "Settings Manager",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.settings-manager@41738c275190",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.settings-manager@41738c275190",
       "fingerprint": "41738c27519039c335849eb78949382f4d7a3544",
       "editorCompatibility": "2022.3.0a1",
       "version": "2.1.0",
@@ -93,7 +93,7 @@
     "com.unity.test-framework@1.5.1": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.test-framework@7056e7f856e9",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.test-framework@7056e7f856e9",
       "fingerprint": "7056e7f856e91f1d294fbe8db0c8fea1ffd9ad5d",
       "editorCompatibility": "2022.3.0a1",
       "version": "1.5.1",
@@ -103,7 +103,7 @@
     "com.unity.testtools.codecoverage@1.2.6": {
       "name": "com.unity.testtools.codecoverage",
       "displayName": "Code Coverage",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.testtools.codecoverage@205a02cbcb39",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.testtools.codecoverage@205a02cbcb39",
       "fingerprint": "205a02cbcb39584f20b51c49b853047aceb3a3a7",
       "editorCompatibility": "2019.3.0a1",
       "version": "1.2.6",
@@ -113,7 +113,7 @@
     "com.unity.timeline@1.8.9": {
       "name": "com.unity.timeline",
       "displayName": "Timeline",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.timeline@6b9e48457ddb",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.timeline@6b9e48457ddb",
       "fingerprint": "6b9e48457ddb4f64813d77fd77efc79a8f3102ae",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.9",
@@ -123,7 +123,7 @@
     "com.unity.toolchain.linux-x86_64@2.0.10": {
       "name": "com.unity.toolchain.linux-x86_64",
       "displayName": "Toolchain Linux x64",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.toolchain.linux-x86_64@5a6ce31f8a65",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.toolchain.linux-x86_64@5a6ce31f8a65",
       "fingerprint": "5a6ce31f8a65b8bae16857cfbdc108c58cdd34f9",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.10",
@@ -133,7 +133,7 @@
     "com.unity.toolchain.macos-x86_64-linux-x86_64@2.0.10": {
       "name": "com.unity.toolchain.macos-x86_64-linux-x86_64",
       "displayName": "Toolchain MacOS Linux x64",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.toolchain.macos-x86_64-linux-x86_64@6c6dc6217c2a",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.toolchain.macos-x86_64-linux-x86_64@6c6dc6217c2a",
       "fingerprint": "6c6dc6217c2a212e7a61aea5b059ce79c442d217",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.10",
@@ -143,7 +143,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.ugui@57cef44123c7",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.ugui@57cef44123c7",
       "fingerprint": "57cef44123c7486b2e2f08dc6535aecf6c34b8ef",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
@@ -406,10 +406,10 @@
       "source": "builtin",
       "testable": false
     },
-    "com.github.homuler.mediapipe@file:D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\com.github.homuler.mediapipe": {
+    "com.github.homuler.mediapipe@file:D:\\Projects\\ReHabGame_Hand_Dexterity\\Packages\\com.github.homuler.mediapipe": {
       "name": "com.github.homuler.mediapipe",
       "displayName": "MediaPipe Unity Plugin",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\com.github.homuler.mediapipe",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Packages\\com.github.homuler.mediapipe",
       "editorCompatibility": "2022.3.0a1",
       "version": "0.16.2",
       "source": "embedded",
@@ -434,7 +434,7 @@
     "com.unity.sysroot@2.0.10": {
       "name": "com.unity.sysroot",
       "displayName": "Sysroot Base",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.sysroot@7bbbb9339c14",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.sysroot@7bbbb9339c14",
       "fingerprint": "7bbbb9339c143f6fbccaeb0a52c77b9217b35a71",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.10",
@@ -444,7 +444,7 @@
     "com.unity.sysroot.linux-x86_64@2.0.9": {
       "name": "com.unity.sysroot.linux-x86_64",
       "displayName": "Sysroot Linux x64",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.sysroot.linux-x86_64@1998d1c7730e",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.sysroot.linux-x86_64@1998d1c7730e",
       "fingerprint": "1998d1c7730e48fa49f28d983fececfc9cbd970b",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.9",
@@ -454,7 +454,7 @@
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.ext.nunit@031a54704bff",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.ext.nunit@031a54704bff",
       "fingerprint": "031a54704bffe39e6a0324909f8eaa4565bdebf2",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.5",
@@ -464,7 +464,7 @@
     "com.unity.burst@1.8.23": {
       "name": "com.unity.burst",
       "displayName": "Burst",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.burst@6aff1dd08a0c",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.burst@6aff1dd08a0c",
       "fingerprint": "6aff1dd08a0c2f92ddb7f56ec033a5cb88967056",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.23",
@@ -474,7 +474,7 @@
     "com.unity.collections@2.5.1": {
       "name": "com.unity.collections",
       "displayName": "Collections",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.collections@56bff8827a7e",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.collections@56bff8827a7e",
       "fingerprint": "56bff8827a7ef6d44fcee4f36e558a74da89c1a0",
       "editorCompatibility": "2022.3.11f1",
       "version": "2.5.1",
@@ -484,7 +484,7 @@
     "com.unity.profiling.core@1.0.2": {
       "name": "com.unity.profiling.core",
       "displayName": "Unity Profiling Core API",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.profiling.core@aac7b93912bc",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.profiling.core@aac7b93912bc",
       "fingerprint": "aac7b93912bc5df5fe06b04ff1b758493cdc2346",
       "editorCompatibility": "2020.1.0a1",
       "version": "1.0.2",
@@ -494,7 +494,7 @@
     "com.unity.editorcoroutines@1.0.0": {
       "name": "com.unity.editorcoroutines",
       "displayName": "Editor Coroutines",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.editorcoroutines@7d48783e7b8c",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.editorcoroutines@7d48783e7b8c",
       "fingerprint": "7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca",
       "editorCompatibility": "2018.1.0a1",
       "version": "1.0.0",
@@ -504,7 +504,7 @@
     "com.unity.nuget.mono-cecil@1.11.4": {
       "name": "com.unity.nuget.mono-cecil",
       "displayName": "Mono Cecil",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.nuget.mono-cecil@d6f9955a5d5f",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.nuget.mono-cecil@d6f9955a5d5f",
       "fingerprint": "d6f9955a5d5f84d45442ff1ad0fb694cc6e2fd62",
       "editorCompatibility": "2018.4.0a1",
       "version": "1.11.4",
@@ -514,7 +514,7 @@
     "com.unity.test-framework.performance@3.1.0": {
       "name": "com.unity.test-framework.performance",
       "displayName": "Performance testing API",
-      "resolvedPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\Library\\PackageCache\\com.unity.test-framework.performance@92d1d09a72ed",
+      "resolvedPath": "D:\\Projects\\ReHabGame_Hand_Dexterity\\Library\\PackageCache\\com.unity.test-framework.performance@92d1d09a72ed",
       "fingerprint": "92d1d09a72ed696fa23fd76c675b29d211664b50",
       "editorCompatibility": "2020.3.0a1",
       "version": "3.1.0",

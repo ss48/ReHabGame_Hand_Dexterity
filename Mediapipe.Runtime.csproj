@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C01224F2-0C68-67F0-F8EE-76CE0093BF76}</ProjectGuid>
+    <ProjectGuid>{9996BE36-1402-6F10-4707-9D0F5C2CFB26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mediapipe.Runtime</AssemblyName>
