@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\MediaPipeUnityPlugin-all\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|d:\\projects\\mediapipeunityplugin-all\\assets\\mediapipeunity\\samples\\scenes\\hand landmark detection\\handlandmarkerrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\scenes\\hand landmark detection\\handlandmarkerrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01224F2-0C68-67F0-F8EE-76CE0093BF76}|Mediapipe.Runtime.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\packages\\com.github.homuler.mediapipe\\runtime\\scripts\\tasks\\core\\packetscallbacktable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C01224F2-0C68-67F0-F8EE-76CE0093BF76}|Mediapipe.Runtime.csproj|solutionrelative:packages\\com.github.homuler.mediapipe\\runtime\\scripts\\tasks\\core\\packetscallbacktable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\ui\\scripts\\autofit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\ui\\scripts\\autofit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\common\\scripts\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\common\\scripts\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\scenes\\legacy\\mediapipe video\\mediapipevideosolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\scenes\\legacy\\mediapipe video\\mediapipevideosolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\scenes\\legacy\\mediapipe video\\mediapipevideoconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\scenes\\legacy\\mediapipe video\\mediapipevideoconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\common\\scripts\\imagesource\\webcamsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\common\\scripts\\imagesource\\webcamsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|D:\\Projects\\MediaPipeUnityPlugin-all\\assets\\mediapipeunity\\samples\\common\\scripts\\imagesource\\imagesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88431FA-E4DE-7A00-0D99-4443C7311AA4}|Mediapipe.Unity.Sample.csproj|solutionrelative:assets\\mediapipeunity\\samples\\common\\scripts\\imagesource\\imagesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14151254:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacketsCallbackTable.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\com.github.homuler.mediapipe\\Runtime\\Scripts\\Tasks\\Core\\PacketsCallbackTable.cs",
+              "RelativeDocumentMoniker": "Packages\\com.github.homuler.mediapipe\\Runtime\\Scripts\\Tasks\\Core\\PacketsCallbackTable.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Packages\\com.github.homuler.mediapipe\\Runtime\\Scripts\\Tasks\\Core\\PacketsCallbackTable.cs",
+              "RelativeToolTip": "Packages\\com.github.homuler.mediapipe\\Runtime\\Scripts\\Tasks\\Core\\PacketsCallbackTable.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAWwDYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T18:31:26.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MediaPipeVideoConfig.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoConfig.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoConfig.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoConfig.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwBsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T15:45:21.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MediaPipeVideoSolution.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoSolution.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoSolution.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoSolution.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Legacy\\MediaPipe Video\\MediaPipeVideoSolution.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T15:44:36.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HandLandmarkerRunner.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAQwM0AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:14:36.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WebCamSource.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\WebCamSource.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\WebCamSource.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\WebCamSource.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\WebCamSource.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAMwP4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:38:01.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Screen.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\Screen.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\Screen.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\Screen.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\Screen.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAD4vyYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:14:10.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AutoFit.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\UI\\Scripts\\AutoFit.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\UI\\Scripts\\AutoFit.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\UI\\Scripts\\AutoFit.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\UI\\Scripts\\AutoFit.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:13:59.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ImageSource.cs",
+              "DocumentMoniker": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\ImageSource.cs",
+              "RelativeDocumentMoniker": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\ImageSource.cs",
+              "ToolTip": "D:\\Projects\\MediaPipeUnityPlugin-all\\Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\ImageSource.cs",
+              "RelativeToolTip": "Assets\\MediaPipeUnity\\Samples\\Common\\Scripts\\ImageSource\\ImageSource.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:09:07.845Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
