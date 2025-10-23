@@ -17,36 +17,70 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     {
         [SerializeField] private HandLandmarkerResultAnnotationController _handLandmarkerResultAnnotationController;
 
-        [SerializeField] private GameObject _landmarkPrefab;
+        [SerializeField] private GameObject _palmPrefab, _fingerPrefab, _nodePrefab;
         [SerializeField] private float _spacing = 15;
         [SerializeField] private bool _flipY = true;
+
+        [SerializeField] private bool _mirror = true;
 
         [Tooltip("Factor to multiply the 2D image offset into 3d movement. Effectively the play area.")]
         [SerializeField] private float _handOffsetMagnitude;
 
         private Experimental.TextureFramePool _textureFramePool;
-        private GameObject[] _landmarkObjects;
+        private List<List<HandObject>> _handObjects;
         bool _isStale = false;
         bool _objectsHidden = false;
         float _lastUpdateTime = -10;
-        private const int _objPoolSize = 42;
 
         private List<List<Vector3>> _handLandmarks;
         private List<bool> _handIsRight;
-        private List<Vector2> _handOffsets;
         private object _landmarkLock = new object();
 
         public readonly HandLandmarkDetectionConfig config = new HandLandmarkDetectionConfig();
 
         private void Awake()
         {
-            _landmarkObjects = new GameObject[_objPoolSize];
-            for (int i = 0; i < _objPoolSize; i++)
-            {
-                _landmarkObjects[i] = Instantiate(_landmarkPrefab, transform);
-                _landmarkObjects[i].name = $"Landmark_{i}";
-                _landmarkObjects[i].SetActive(false);
-            }
+            _handObjects = new();
+
+            List<HandObject> leftHand = new();
+            leftHand.Add(new PalmObject(_palmPrefab, 0, 5, 17));
+
+            leftHand.Add(new FingerObject(_fingerPrefab, 1, 2));
+            leftHand.Add(new FingerObject(_fingerPrefab, 3, 4));
+
+            leftHand.Add(new FingerObject(_fingerPrefab, 5, 6));
+            leftHand.Add(new FingerObject(_fingerPrefab, 7, 8));
+
+            leftHand.Add(new FingerObject(_fingerPrefab, 9, 10));
+            leftHand.Add(new FingerObject(_fingerPrefab, 11, 12));
+
+            leftHand.Add(new FingerObject(_fingerPrefab, 13, 14));
+            leftHand.Add(new FingerObject(_fingerPrefab, 15, 16));
+
+            leftHand.Add(new FingerObject(_fingerPrefab, 17, 18));
+            leftHand.Add(new FingerObject(_fingerPrefab, 19, 20));
+
+            _handObjects.Add(leftHand);
+
+            List<HandObject> rightHand = new();
+            rightHand.Add(new PalmObject(_palmPrefab, 0, 5, 17));
+
+            rightHand.Add(new FingerObject(_fingerPrefab, 1, 2));
+            rightHand.Add(new FingerObject(_fingerPrefab, 3, 4));
+
+            rightHand.Add(new FingerObject(_fingerPrefab, 5, 6));
+            rightHand.Add(new FingerObject(_fingerPrefab, 7, 8));
+
+            rightHand.Add(new FingerObject(_fingerPrefab, 9, 10));
+            rightHand.Add(new FingerObject(_fingerPrefab, 11, 12));
+
+            rightHand.Add(new FingerObject(_fingerPrefab, 13, 14));
+            rightHand.Add(new FingerObject(_fingerPrefab, 15, 16));
+
+            rightHand.Add(new FingerObject(_fingerPrefab, 17, 18));
+            rightHand.Add(new FingerObject(_fingerPrefab, 19, 20));
+
+            _handObjects.Add(rightHand);
         }
 
 
@@ -204,7 +238,6 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             {
                 _handLandmarks = new List<List<Vector3>>();
                 _handIsRight = new List<bool>();
-                _handOffsets = new List<Vector2>();
                 for (int i = 0; i < handCount; ++i)
                 {
                     _handLandmarks.Add(new List<Vector3>());
@@ -212,14 +245,13 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
                     string categoryName = result.handedness[i].categories[0].categoryName;
                     _handIsRight.Add(categoryName == "Right");
                     var rootLandmark2D = result.handLandmarks[i].landmarks[0];
-                    _handOffsets.Add(new Vector2((rootLandmark2D.x - 0.5f) * ar, 1f - rootLandmark2D.y));
+                    Vector3 handOffset = new Vector2((rootLandmark2D.x - 0.5f) * ar, 1f - rootLandmark2D.y);
 
                     for (int j = 0; j < result.handWorldLandmarks[i].landmarks.Count; ++j)
                     {
                         var landmark = result.handWorldLandmarks[i].landmarks[j];
-                        Vector3 pos = new Vector3(landmark.x, landmark.y, landmark.z);
+                        Vector3 pos = TransformPoint(new Vector3(landmark.x, landmark.y, landmark.z), handOffset);
                         _handLandmarks[i].Add(pos);
-
                     }
                 }
                 _isStale = true;
@@ -227,60 +259,171 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
         }
 
 
+        private Vector3 TransformPoint(Vector3 landmark, Vector3 offset)
+        {
+            landmark *= _spacing;
+            if (_flipY)
+            {
+                landmark = new Vector3(landmark.x, -landmark.y, landmark.z);
+            }
+
+            if(!_mirror) // data is mirrored by default
+            {
+                landmark = new Vector3(landmark.x, landmark.y, -landmark.z);
+            }
+
+            landmark += offset * _handOffsetMagnitude;
+
+            return landmark;
+        }
+
+
         private void LateUpdate()
         {
             if (_isStale)
             {
-                RefreshLandmarkObjects();
+                RefreshHandObjects();
                 _lastUpdateTime = Time.time;
                 _objectsHidden = false;
                 _isStale = false;
             }
             else if (Time.time > _lastUpdateTime + 0.5f)
             {
-                HideLandmarkObjects();
+                HideHandObjects(0); // for now only 2 hands
+                HideHandObjects(1);
                 _lastUpdateTime = Time.time + 1000f;
                 _objectsHidden = true;
             }
         }
 
 
-        private void RefreshLandmarkObjects()
+        private void RefreshHandObjects()
         {
             lock (_landmarkLock)
             {
-                int handCount = _handLandmarks.Count;
-                int objCount = 0;
+                int handCount = _handObjects.Count;
                 for (int i = 0; i < handCount; ++i)
                 {
-                    for (int j = 0; j < _handLandmarks[i].Count; ++j)
+                    if(i < _handLandmarks.Count)
                     {
-                        var obj = _landmarkObjects[objCount];
-                        obj.SetActive(true);
-                        obj.transform.position = _handLandmarks[i][j] * _spacing;
-                        if(_flipY)
+                        foreach (HandObject obj in _handObjects[i])
                         {
-                            obj.transform.position = new Vector3(obj.transform.position.x, -obj.transform.position.y, obj.transform.position.z);
+                            obj.Update(_handLandmarks[i]);
                         }
-
-                        obj.transform.position += (Vector3)_handOffsets[i] * _handOffsetMagnitude;
-                        ++objCount;
                     }
-                }
-
-                for (int i = objCount; i < _objPoolSize; ++i)
-                {
-                    _landmarkObjects[i].SetActive(false);
+                    else
+                    {
+                        HideHandObjects(i);
+                    }
                 }
             }
         }
 
 
-        private void HideLandmarkObjects()
+        private void HideHandObjects(int handIndex)
         {
-            for (int i = 0; i < _objPoolSize; ++i)
+            if(handIndex < _handObjects.Count)
             {
-                _landmarkObjects[i].SetActive(false);
+                foreach (var obj in _handObjects[handIndex])
+                {
+                    obj.Hide();
+                }
+            }
+        }
+
+
+        private abstract class HandObject
+        {
+            public virtual void Update(List<Vector3> handLandmarks) { }
+            public virtual void Hide() { }
+        }
+
+
+        private class PalmObject : HandObject
+        {
+            GameObject _gameObject;
+            private int _rootIndex;
+            private int _innerIndex;
+            private int _outerIndex;
+
+            public PalmObject(GameObject prefab, int rootIndex, int innerIndex, int outerIndex)
+            {
+                _gameObject = Instantiate(prefab);
+                _rootIndex = rootIndex;
+                _innerIndex = innerIndex;
+                _outerIndex = outerIndex;
+            }
+
+            public override void Update(List<Vector3> handLandmarks)
+            {
+                _gameObject.transform.position = handLandmarks[_rootIndex];
+
+                Vector3 a = handLandmarks[_rootIndex];
+                Vector3 b = handLandmarks[_innerIndex];
+                Vector3 c = handLandmarks[_outerIndex];
+
+                Vector3 normal = Vector3.Normalize(Vector3.Cross(b - a, c - a));
+                Vector3 up = ((b + c) * 0.5f - a).normalized;
+                _gameObject.transform.rotation = Quaternion.LookRotation(normal, up);
+                _gameObject.SetActive(true);
+            }
+
+            public override void Hide()
+            {
+                _gameObject.SetActive(false);
+            }
+        }
+
+
+        private class FingerObject : HandObject
+        {
+            GameObject _gameObject;
+            private int _baseIndex;
+            private int _tipIndex;
+
+            public FingerObject(GameObject prefab, int baseIndex, int tipIndex)
+            {
+                _gameObject = Instantiate(prefab);
+                _baseIndex = baseIndex;
+                _tipIndex = tipIndex;
+            }
+
+            public override void Update(List<Vector3> handLandmarks)
+            {
+                Vector3 basePos = handLandmarks[_baseIndex];
+                Vector3 tipPos = handLandmarks[_tipIndex];
+                _gameObject.transform.position = tipPos;
+                _gameObject.transform.rotation = Quaternion.LookRotation((basePos - tipPos).normalized);
+                _gameObject.SetActive(true);
+            }
+
+            public override void Hide()
+            {
+                _gameObject.SetActive(false);
+            }
+        }
+
+
+        private class NodeObject : HandObject
+        {
+            GameObject _gameObject;
+            private int _index;
+
+            public NodeObject(GameObject prefab, int index)
+            {
+                _gameObject = Instantiate(prefab);
+                _index = index;
+            }
+
+            public override void Update(List<Vector3> handLandmarks)
+            {
+                _gameObject.transform.position = handLandmarks[_index];
+                _gameObject.SetActive(true);
+            }
+
+            public override void Hide()
+            {
+                _gameObject.SetActive(false);
             }
         }
 
@@ -290,13 +433,16 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
         {
             if (_objectsHidden) return;
 
-            for (int i = 0; i < _landmarkObjects.Length; ++i)
-            {
-                if (_landmarkObjects[i].activeInHierarchy)
-                {
-                    Handles.Label(_landmarkObjects[i].transform.position, i.ToString());
-                }
-            }
+            //lock (_landmarkLock)
+            //{
+            //    for (int i = 0; i < _handLandmarks.Count; ++i)
+            //    {
+            //        for(int j = 0; j < _handLandmarks[i].Count; ++j)
+            //        {
+            //            Handles.Label(_handLandmarks[i][j], j.ToString());
+            //        }
+            //    }
+            //}
         }
 #endif
     }
