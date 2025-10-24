@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ModalContents.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AssetLoader.cs" />
+    <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\HandPart.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Legacy\Holistic\HolisticTrackingSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\LegacySolutionRunner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Image Segmentation\ImageSegmentationConfig.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Legacy\Holistic\HolisticTrackingGraph.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Landmark Detection\FaceLandmarkDetectionConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Landmark Detection\HandLandmarkDetectionConfig.cs" />
+    <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\GameManager.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\ImageSourceType.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Legacy\MediaPipe Video\MediaPipeVideoSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\TaskApiRunner.cs" />

@@ -4,10 +4,9 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+using Mediapipe.Tasks.Vision.HandLandmarker;
 using System.Collections;
 using System.Collections.Generic;
-using Mediapipe.Tasks.Vision.HandLandmarker;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -46,19 +45,19 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             leftHand.Add(new PalmObject(_palmPrefab, 0, 5, 17));
 
             leftHand.Add(new FingerObject(_fingerPrefab, 1, 2));
-            leftHand.Add(new FingerObject(_fingerPrefab, 3, 4));
+            leftHand.Add(new FingerObject(_fingerPrefab, 3, 4, HandPartType.Thumb));
 
             leftHand.Add(new FingerObject(_fingerPrefab, 5, 6));
-            leftHand.Add(new FingerObject(_fingerPrefab, 7, 8));
+            leftHand.Add(new FingerObject(_fingerPrefab, 7, 8, HandPartType.IndexFinger));
 
             leftHand.Add(new FingerObject(_fingerPrefab, 9, 10));
-            leftHand.Add(new FingerObject(_fingerPrefab, 11, 12));
+            leftHand.Add(new FingerObject(_fingerPrefab, 11, 12, HandPartType.MiddleFinger));
 
             leftHand.Add(new FingerObject(_fingerPrefab, 13, 14));
-            leftHand.Add(new FingerObject(_fingerPrefab, 15, 16));
+            leftHand.Add(new FingerObject(_fingerPrefab, 15, 16, HandPartType.RingFinger));
 
             leftHand.Add(new FingerObject(_fingerPrefab, 17, 18));
-            leftHand.Add(new FingerObject(_fingerPrefab, 19, 20));
+            leftHand.Add(new FingerObject(_fingerPrefab, 19, 20, HandPartType.PinkyFinger));
 
             _handObjects.Add(leftHand);
 
@@ -66,19 +65,19 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             rightHand.Add(new PalmObject(_palmPrefab, 0, 5, 17));
 
             rightHand.Add(new FingerObject(_fingerPrefab, 1, 2));
-            rightHand.Add(new FingerObject(_fingerPrefab, 3, 4));
+            rightHand.Add(new FingerObject(_fingerPrefab, 3, 4, HandPartType.Thumb));
 
             rightHand.Add(new FingerObject(_fingerPrefab, 5, 6));
-            rightHand.Add(new FingerObject(_fingerPrefab, 7, 8));
+            rightHand.Add(new FingerObject(_fingerPrefab, 7, 8, HandPartType.IndexFinger));
 
             rightHand.Add(new FingerObject(_fingerPrefab, 9, 10));
-            rightHand.Add(new FingerObject(_fingerPrefab, 11, 12));
+            rightHand.Add(new FingerObject(_fingerPrefab, 11, 12, HandPartType.MiddleFinger));
 
             rightHand.Add(new FingerObject(_fingerPrefab, 13, 14));
-            rightHand.Add(new FingerObject(_fingerPrefab, 15, 16));
+            rightHand.Add(new FingerObject(_fingerPrefab, 15, 16, HandPartType.RingFinger));
 
             rightHand.Add(new FingerObject(_fingerPrefab, 17, 18));
-            rightHand.Add(new FingerObject(_fingerPrefab, 19, 20));
+            rightHand.Add(new FingerObject(_fingerPrefab, 19, 20, HandPartType.PinkyFinger));
 
             _handObjects.Add(rightHand);
         }
@@ -334,6 +333,22 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         private abstract class HandObject
         {
+            protected void FormatGameObject(GameObject gameObject, HandPartType handPartType)
+            {
+                if (handPartType != HandPartType.None)
+                {
+                    var handPart = gameObject.GetComponent<HandPart>();
+                    if (handPart != null)
+                    {
+                        handPart.Type = handPartType;
+                    }
+                    else
+                    {
+                        Debug.LogError("HandLandmarkerRunner::HandObject::FormatGameObject - INstantiated Game Object does not have the HandPart MonoBehaviour");
+                    }
+                }
+            }
+
             public virtual void Update(List<Vector3> handLandmarks) { }
             public virtual void Hide() { }
         }
@@ -341,14 +356,16 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         private class PalmObject : HandObject
         {
-            GameObject _gameObject;
+            private GameObject _gameObject;
             private int _rootIndex;
             private int _innerIndex;
             private int _outerIndex;
 
-            public PalmObject(GameObject prefab, int rootIndex, int innerIndex, int outerIndex)
+            public PalmObject(GameObject prefab, int rootIndex, int innerIndex, int outerIndex, HandPartType handPartType = HandPartType.None)
             {
                 _gameObject = Instantiate(prefab);
+                Hide();
+                FormatGameObject(_gameObject, handPartType);
                 _rootIndex = rootIndex;
                 _innerIndex = innerIndex;
                 _outerIndex = outerIndex;
@@ -377,13 +394,15 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         private class FingerObject : HandObject
         {
-            GameObject _gameObject;
+            private GameObject _gameObject;
             private int _baseIndex;
             private int _tipIndex;
 
-            public FingerObject(GameObject prefab, int baseIndex, int tipIndex)
+            public FingerObject(GameObject prefab, int baseIndex, int tipIndex, HandPartType handPartType = HandPartType.None)
             {
                 _gameObject = Instantiate(prefab);
+                Hide();
+                FormatGameObject(_gameObject, handPartType);
                 _baseIndex = baseIndex;
                 _tipIndex = tipIndex;
             }
@@ -406,12 +425,14 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         private class NodeObject : HandObject
         {
-            GameObject _gameObject;
+            private GameObject _gameObject;
             private int _index;
 
-            public NodeObject(GameObject prefab, int index)
+            public NodeObject(GameObject prefab, int index, HandPartType handPartType = HandPartType.None)
             {
                 _gameObject = Instantiate(prefab);
+                Hide();
+                FormatGameObject(_gameObject, handPartType);
                 _index = index;
             }
 
